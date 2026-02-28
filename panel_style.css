@@ -175,3 +175,15 @@ a{
  font-family: Roboto;
 }
 
+footer{
+width: 100%;
+padding: 3rem 2rem;
+background: var(--header-color);
+display: flex;
+justify-content: center; align-items: center;
+}
+
+footer h3{
+text-align: center;
+}
+
