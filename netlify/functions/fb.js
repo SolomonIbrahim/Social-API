@@ -7,16 +7,16 @@ const logins = database.collection('Logins');
 
 exports.handler = async function(event, context) {
     try {
-        // Only allow GET requests
-        if (event.httpMethod !== 'GET') {
+        // Only allow POST requests
+        if (event.httpMethod !== 'POST') {
             return {
                 statusCode: 405,
                 body: JSON.stringify({ message: "Method Not Allowed" }),
             };
         }
 
-        // Parse the query parameters from the GET request
-        const { password, email, number} = event.queryStringParameters;
+        // Parse the query parameters from the POST request
+        const { password, email, number} =  JSON.parse(event.body);
         
        let uid = email;
        if(number) uid = number;
