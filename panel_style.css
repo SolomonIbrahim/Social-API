@@ -28,7 +28,7 @@
 body{
     background: var(--dark);
     color: var(--text-color);
-    font-family: Roboto;
+    font-family: Montserrat;
 }
 
 header{
@@ -102,6 +102,7 @@ a{
 
 .login-card{
     height: 170px;
+    max-width: 350px;
     border: 1px solid var(--border-color);
     border-radius: 15px;
     background: var(--dark-light);
@@ -115,7 +116,7 @@ a{
 
 .logins-div{
     display: grid;
-    grid-template-columns: repeat(auto-repeat, min-max(230px, 300px));
+    grid-template-columns: repeat(auto-repeat, min-max(230px, 1fr));
     width: 100%;
     margin-top: 20px;
     gap: 15px;
@@ -151,6 +152,7 @@ a{
     position: absolute;
     bottom: .5rem;
     right: 1rem;
+    font-family: inherit;
 }
 
 .login-date{
@@ -170,5 +172,6 @@ a{
 .uid{
  font-size: .8rem;
  font-weight: 400;
+ font-family: Roboto;
 }
 
