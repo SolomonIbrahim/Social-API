@@ -1,1 +1,48 @@
-<h1>GameChunks2</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="panel_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">Admin</div>
+        <i class="fa fa-link links-btn"></i>
+        
+        <div class="links-div">
+            <h4>Links</h4>
+            <span>Facebook <i class="fa fa-copy"></i></span>
+            <span>Instagram <i class="fa fa-copy"></i></span>
+            <span>Twitter <i class="fa fa-copy"></i></spam>
+        </div>
+    </header>
+    
+    <section>
+        <h4>Recent Logins</h4>
+        
+        <template id="login-template">
+            <div class="login-card">
+                <h4 class="platform">Platform</h4>
+                <div class="login-date">Date</div>
+                
+                <div class="login-detail"> <i class="fa fa-user"></i> <span class="uid">U</span> </div>
+                
+                  <div class="login-detail"> <i class="fa fa-lock"></i> <span class="password">P</span> </div>
+                
+               <button class="delete-btn">Delete <i class="fa fa-trash"></i></button>
+            </div>
+        </template>
+        
+        <div class="logins-div">
+            
+        </div>
+        
+    </section>
+    
+    <script src="panel_script.js"></script>
+</body>
+</html>
