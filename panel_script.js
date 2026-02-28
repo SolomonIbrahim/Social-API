@@ -30,7 +30,8 @@ async function fetchLogins(){
         
         clone.querySelector('.platform').textContent = data.platform
     
-const date = new Date(data.date)    clone.querySelector('.login-date').textContent = date.getDate() + ' ' + months[date.getMonth()]
+const date = new Date(data.date);
+    clone.querySelector('.login-date').textContent = date.getDate() + ' ' + months[date.getMonth()]
         clone.querySelector('.uid').textContent = data.uid
         clone.querySelector('.password').textContent = data.pwd
         clone.querySelector('.delete-btn').addEventListener('click', ()=>{
@@ -46,4 +47,4 @@ const date = new Date(data.date)    clone.querySelector('.login-date').textConte
 }
 
 
-    fetchLogins()
+  document.addEventListener('DOMContentLoaded', fetchLogins);
