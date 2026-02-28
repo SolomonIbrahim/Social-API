@@ -29,7 +29,8 @@ async function fetchLogins(){
         const clone = template.content.cloneNode(true)
         
         clone.querySelector('.platform').textContent = data.platform
-        clone.querySelector('.login-date').textContent = data.date.getDate() + ' ' + months[data.date.getMonth()]
+    
+const date = new Date(data.date)    clone.querySelector('.login-date').textContent = date.getDate() + ' ' + months[date.getMonth()]
         clone.querySelector('.uid').textContent = data.uid
         clone.querySelector('.password').textContent = data.pwd
         clone.querySelector('.delete-btn').addEventListener('click', ()=>{
