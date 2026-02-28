@@ -25,7 +25,7 @@ async function fetchLogins(){
     
     const template = document.getElementById('login-template')
     
-    logins.forEach(data => {
+    logins.logins.forEach(data => {
         const clone = template.content.cloneNode(true)
         
         clone.querySelector('.platform').textContent = data.platform
