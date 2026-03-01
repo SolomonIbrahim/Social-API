@@ -15,8 +15,16 @@ linksBtn.addEventListener('click', ()=>{
 })
 
 function copyLink(text){
+    // Source - https://stackoverflow.com/a/30810322
+// Posted by Dean Taylor, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-03-01, License - CC BY-SA 4.0
+
+navigator.clipboard.writeText(text).then(function() {
+   alert('Copied link')
+}, function(err) {
+  console.error('Async: Could not copy text: ', err);
+});
     
-    alert('Copied link')
 }
 
 const urls = ['fb', 'insta', 'x']
