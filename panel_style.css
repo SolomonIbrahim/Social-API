@@ -73,7 +73,7 @@ section{
 .links-div{
     position: absolute;
     display: none; flex-direction: column;
-    background: var(--dark-light);
+    background: var(--dark);
     border: 1px solid var(--border-color);
     padding: 1rem;
     top: 65px;
@@ -88,9 +88,10 @@ section{
 }
 
 .links-div span{
-    padding: .2rem;
-    border-radius: 5px;
-    background: var(--header-color);
+    padding: .4rem .3rem;
+    border-radius: 9px;
+    font-weight: 500;
+    background: var(--dark-light);
     width: 100%;
     display: flex; justify-content: space-between; align-items: center;
 }
@@ -131,6 +132,7 @@ a{
     padding: .2rem;
     text-align: center;
     font-size: 1rem;
+    font-weight: 400;
     /*display: flex; justify-content: center; align-items: center;*/
     width: 100px;
 }
