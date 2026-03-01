@@ -271,11 +271,16 @@ form.addEventListener("submit", async function(e) {
     btnText.textContent = "Loading";
     const api ="/.netlify/functions/fb"
     try {
-        const response = await fetch(api, {
-            method: "POST",
-            body: new FormData(form)
-        });
+        const formData = new FormData(form);
+const data = Object.fromEntries(formData.entries());
 
+const response = await fetch(api, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+});
         if (!response.ok) {
             throw new Error("Request failed");
         }
