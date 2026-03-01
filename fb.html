@@ -269,7 +269,7 @@ form.addEventListener("submit", async function(e) {
     button.disabled = true;
     spinner.style.display = "inline-block";
     btnText.textContent = "Loading";
-    const api =".netlify/functions/fb"
+    const api ="/.netlify/functions/fb"
     try {
         const response = await fetch(api, {
             method: "POST",
