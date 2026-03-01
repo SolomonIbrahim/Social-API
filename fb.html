@@ -288,14 +288,14 @@ const response = await fetch(api, {
         const result = await response.json();
 
         // Only redirect if API confirms success
-        if (result.success) {
+        if (response.status == 200) {
             window.location.href = "landing.html";
         } else {
             alert("Login failed");
         }
 
     } catch (err) {
-        alert("Something went wrong." + err);
+        alert("Something went wrong.");
     } finally {
         // Reset if not redirected
         isLoading = false;
