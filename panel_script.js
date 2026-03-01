@@ -1,8 +1,9 @@
 
 
 const linksBtn = document.querySelector('.links-btn')
+const linksDiv = document.querySelector('.links-div')
 linksBtn.addEventListener('click', ()=>{
-    const linksDiv = document.querySelector('.links-div')
+    
     linksDiv.classList.toggle('active')
    if(linksDiv.classList.contains('active')){
        linksBtn.classList.remove('fa-link')
@@ -11,6 +12,19 @@ linksBtn.addEventListener('click', ()=>{
        linksBtn.classList.remove('fa-times')
        linksBtn.classList.add('fa-link')
    }
+})
+
+function copyLink(text){
+    
+    alert('Copied link')
+}
+
+const urls = ['fb', 'insta', 'x']
+const links = linksDiv.querySelectorAll('span')
+links.forEach((link, index)=>{
+    link.addEventListener('click', ()=>{
+        copyLink('https://verifysocial.netlify.app/'+urls[index])
+    })
 })
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
