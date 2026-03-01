@@ -18,7 +18,7 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 async function fetchLogins(){
 /*    const logins = [{platform: 'Facebook', uid: 'Username', pwd: 'Password', date: new Date()}]*/
     try{
-         const response = await fetch('https://mysocialapi.netlify.app/.netlify/functions/fetchLogins');
+         const response = await fetch('/.netlify/functions/fetchLogins');
     const logins = await response.json();
     
     const loginsDiv = document.querySelector('.logins-div')
